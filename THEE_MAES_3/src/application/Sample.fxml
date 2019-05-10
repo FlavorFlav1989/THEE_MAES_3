@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="409.0000999999975" prefWidth="1055.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.SampleController">
+  <!-- TODO Add Nodes -->
+  <center>
+    <VBox fx:id="hbox_lc" prefHeight="364.0" prefWidth="959.0000999999975">
+      <children>
+        <HBox alignment="CENTER" prefHeight="91.00009999999747" prefWidth="1055.0">
+          <children>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="125.0">
+              <children>
+                <Label text="Nombre d'arrivé" />
+                <TextField fx:id="nb_arrive" prefWidth="200.0" />
+              </children>
+              <HBox.margin>
+                <Insets right="10.0" fx:id="x1" />
+              </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="215.0" HBox.margin="$x1">
+              <children>
+                <Label text="Capacité de chaque ligne (Kb/s)" />
+                <TextField fx:id="capa_ligne" prefWidth="200.0" />
+              </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="125.0" HBox.margin="$x1">
+              <children>
+                <Label text="Nombre de lignes" />
+                <TextField fx:id="nb_ligne" prefWidth="200.0" />
+              </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="168.0">
+              <children>
+                <Label text="Nombre paquets arrive" />
+                <TextField id="nb_ligne" fx:id="nb_paquet_arrive" prefWidth="200.0" />
+              </children>
+              <HBox.margin>
+                <Insets right="10.0" fx:id="x1" />
+              </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="125.0">
+              <children>
+                <Label text="Taille des paquets" />
+                <TextField id="nb_ligne" fx:id="taille_paquet_arrive" prefWidth="200.0" />
+              </children>
+              <HBox.margin>
+                <Insets right="10.0" fx:id="x1" />
+              </HBox.margin>
+            </VBox>
+            <Button fx:id="calculer" mnemonicParsing="false" onAction="#calcul" prefHeight="41.0" prefWidth="73.0" text="Calculer">
+              <HBox.margin>
+                <Insets right="10.0" fx:id="x1" />
+              </HBox.margin>
+            </Button>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="77.0" prefWidth="1055.0">
+          <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+              <children>
+                <Label text="Lamda" />
+                <TextField id="nbs" fx:id="lamda" disable="true" opacity="0.85" prefWidth="200.0" style="border-radius : 2px;" />
+              </children>
+              <HBox.margin>
+                <Insets right="10.0" fx:id="x1" />
+              </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+              <children>
+                <Label text="Mu" />
+                <TextField id="nbs" fx:id="mu" disable="true" opacity="0.85" prefWidth="200.0" style="border-radius : 2px;" />
+              </children>
+              <HBox.margin>
+                <Insets right="10.0" fx:id="x1" />
+              </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+              <children>
+                <Label text="S" />
+                <TextField id="nbs" fx:id="s" disable="true" opacity="0.85" prefWidth="200.0" style="border-radius : 2px;" />
+              </children>
+              <HBox.margin>
+                <Insets right="10.0" fx:id="x1" />
+              </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="100.0" prefWidth="147.0">
+              <children>
+                <Label text="Taille du buffer (Kb)" />
+                <TextField id="capa_ligne" fx:id="taille_buffer" disable="true" opacity="0.85" prefWidth="200.0" />
+              </children>
+              <HBox.margin>
+                <Insets right="10.0" fx:id="x1" />
+              </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+              <children>
+                <Label text="NbS" />
+                <TextField fx:id="nbs" disable="true" opacity="0.85" prefWidth="200.0" style="border-radius : 2px;" />
+              </children>
+              <HBox.margin>
+                <Insets right="5.0" fx:id="x2" />
+              </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.margin="$x2">
+              <children>
+                <Label text="NbF" />
+                <TextField fx:id="nbf" disable="true" opacity="0.85" prefWidth="200.0" style="border-radius : 2px;" />
+              </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.margin="$x2">
+              <children>
+                <Label text="NbSO" />
+                <TextField fx:id="nbso" disable="true" opacity="0.85" prefWidth="200.0" style="border-radius : 2px;" />
+              </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.margin="$x2">
+              <children>
+                <Label text="TAS" />
+                <TextField fx:id="tas" disable="true" opacity="0.85" prefWidth="200.0" style="border-radius : 2px;" />
+              </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.margin="$x2">
+              <children>
+                <Label text="TAF" />
+                <TextField fx:id="taf" disable="true" opacity="0.85" prefWidth="200.0" style="border-radius : 2px;" />
+              </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+              <children>
+                <Label text="NbSI" />
+                <TextField fx:id="nbsi" disable="true" opacity="0.85" prefWidth="200.0" style="border-radius : 2px;" />
+              </children>
+            </VBox>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="46.0" prefWidth="959.0">
+          <children>
+            <VBox alignment="CENTER" prefHeight="46.0" prefWidth="125.0">
+              <children>
+                <Label text="Paquets arrivés" />
+                <TextField id="pa" fx:id="paquets_arrives" disable="true" opacity="0.85" prefWidth="108.0" />
+              </children>
+              <HBox.margin>
+                <Insets right="10.0" fx:id="x1" />
+              </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="46.0" prefWidth="125.0">
+              <children>
+                <Label text="Paquets perdus" />
+                <TextField id="pa" fx:id="paquets_pardus" disable="true" opacity="0.85" prefWidth="108.0" />
+              </children>
+              <HBox.margin>
+                <Insets right="10.0" fx:id="x1" />
+              </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="46.0" prefWidth="153.0">
+              <children>
+                <Label text="Pourcentage de perte" />
+                <TextField id="pa" fx:id="pourc_perte" disable="true" opacity="0.85" prefWidth="108.0" />
+              </children>
+              <HBox.margin>
+                <Insets right="10.0" fx:id="x1" />
+              </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="46.0" prefWidth="251.0">
+              <children>
+                <Label text="Moyenne de paquets dans le système" />
+                <TextField id="pa" fx:id="moy_paquets_sys" disable="true" opacity="0.85" prefWidth="108.0" />
+              </children>
+              <HBox.margin>
+                <Insets right="10.0" fx:id="x1" />
+              </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="46.0" prefWidth="226.0" HBox.margin="$x1">
+              <children>
+                <Label text="Moyenne de paquets dans la file" />
+                <TextField id="pa" fx:id="moy_paquets_file" disable="true" opacity="0.85" prefWidth="108.0" />
+              </children>
+            </VBox>
+            <Button fx:id="ki2" mnemonicParsing="false" onAction="#click_ki2" prefHeight="41.0" prefWidth="103.0" text="Tableau ki2" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </center>
+</BorderPane>
